@@ -1,0 +1,26 @@
+class Company {
+    static String companyName = "Tech Solutions"
+    String employeeName;
+    Company(String employeeName) {
+        this.employeeName = employeeName;
+    }
+    void displayDetails() {
+        System.out.println("Company: " + companyName + ", Employee: " + employeeName);
+    }
+
+    public static void main(String[] args) {
+        
+        Company emp1 = new Company("Alice");
+        Company emp2 = new Company("Bob");
+        Company emp3 = new Company("Charlie");
+        emp1.displayDetails();
+        emp2.displayDetails();
+        emp3.displayDetails();
+        
+      Company.companyName = "Global Tech";
+        
+        emp1.displayDetails();
+        emp2.displayDetails();
+        emp3.displayDetails();
+    }
+}
