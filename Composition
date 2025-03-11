@@ -1,0 +1,25 @@
+ class Battery {
+   void capacity() {  // Method, not just a field
+     System.out.println("Battery has the capacity");
+   }
+}
+
+class Mobile {
+   Battery b;
+
+   Mobile() {
+     b = new Battery();
+   }
+
+   void capacity() {
+     b.capacity();  // Calling Battery's capacity method
+     System.out.println("Mobile has the capacity");
+   }
+}
+
+ class Composition {  // Class name should start with an uppercase letter
+   public static void main(String[] args) {
+     Mobile m = new Mobile();
+     m.capacity();
+   }
+}
