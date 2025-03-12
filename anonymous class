@@ -1,0 +1,34 @@
+ class Computer
+ { 
+   class Processor{
+     void display()
+   {
+     System.out.println("Processor inside computer");
+   }
+   }
+   void showLocalInnerClass(){
+     class Memory{
+       void display(){
+         System.out.println("Memory inside computer");
+         }
+     }
+     Memory memory=new Memory();
+     memory.display();
+   }
+     void showAnonymousClass(){
+     Runnable task=new Runnable(){
+       public void run(){
+         System.out.println("Anonymous Runnable running");
+       }
+     };
+     task.run();
+       }
+       
+       public static void main(String args[]){
+         Computer c=new Computer();
+         Computer.Processor processor=c.new Processor();
+         processor.display();
+         c.showLocalInnerClass();
+         c.showAnonymousClass();
+       }
+   }
